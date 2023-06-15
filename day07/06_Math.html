@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Math object</title>
+    </head>
+    <body>
+        
+        <script>
+
+            // 4.Math
+
+            // 별도의 new 없이 클래스명으로 그냥 메소드 사용
+
+            var n=3.14;
+            document.write( Math.floor(n)+"<br>" ) //플로어 - 소수점 제거
+            document.write( Math.round(n)+"<br>" ) //반올림 
+            document.write( Math.ceil(n)+"<br>" )  //천장 - 소수점이 있으면 무조건 올림
+
+            // 랜덤값
+            var r=Math.random(); //0.0~1.0
+            document.write(r+"<br>")
+
+            // 0~9 사이를 얻고 싶다면.
+            var r=Math.floor(Math.random()*10); 
+            document.write(r+"<br>")
+
+            // 5~15
+            var r=(Math.random()*11+5).toFixed(); 
+            document.write(typeof(r)+"<br>") //string
+
+
+        </script>
+
+    </body>
+</html>

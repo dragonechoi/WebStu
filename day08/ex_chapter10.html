@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>aa</title>
+        
+        </script>
+    </head>
+    <body>
+        <h3 id="ee">버튼을 누르면 요소의 내용이 변경 됩니다</h3>
+        <button onclick="aaa()">buttom</button> <br>
+        <button onclick="bbb()">버튼을 클릭하세요</button> <br>
+        <input type="text" id="in1">
+        <button onclick="check()">입력완료</button>
+
+        <script>
+            function check(){
+                var e=document.getElementById("in1")
+                var s=e.value;
+
+                var regExp=/^[0-9]+$/
+
+                if(regExp.test(s)) alert("일치하는 형식")
+                 else alert("숫자가 아닙니다.")
+
+            }
+        </script>
+
+       
+
+        <script>
+            
+            function aaa(){
+                var e=document.querySelector("#ee"); 
+                e.innerHTML="이 요소는 변경된 값 입니다.";
+            }
+            function bbb(){
+                alert("반갑습니다.");
+            }
+            </script>
+        
+    </body>
+</html>

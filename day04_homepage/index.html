@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>web shop html</title>
+
+        <!-- 외부 스타일 시트 적용 -->
+        <link rel="stylesheet" href="./index.css">
+
+    </head>
+    <body>
+        <div>
+
+            <header id="warpper">
+                <h1>
+                    <img src="./image/shop.png" width="50" height="50"><a href="#">Web Shop</a>
+                </h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./ubout.html">About Us</a></li>
+                    <li><a href="./myaccount.html">My Account</a></li>
+                    
+                    <li><a href="./news.html">news</a></li>
+                    
+                    <li><a href="./contect.html">Content</a></li>
+                </ul>
+            </nav>
+            <aside id="left">
+                <h4>카테고리</h4>
+                <ul>
+                    <li><a href="./computer.html" target="iframe1">컴퓨터</a></li>
+                    <li><a href="./clothing.html" target="iframe1">의류</a></li>
+                    <li><a href="./music.html" target="iframe1">음악</a></li>
+                    <li><a href="./movie.html" target="iframe1">영화</a></li>
+                    <li><a href="./sport.html" target="iframe1">스포츠/레저</a></li>
+                    <li><a href="./computer" target="iframe1">인테리어/가구</a></li>
+                    <li><a href="./computer" target="iframe1">식품</a></li>
+                </ul>
+            </aside>
+            <section id="main">
+                <article>
+                    <iframe name="iframe1" src="/coumputer.html" frameborder="0" width="450" height="350"></iframe>
+                </article>
+            </section>
+
+            <aside id="right">
+                <div id="shopcart">
+                    <h4>Shopping Cart</h4>
+                    현재 쇼핑카트에 물품이 없습니다. <br>
+                    <a href="./shopcart.html">쇼핑카트 보기</a>
+                </div>
+
+                <div id="login">
+
+                    <h4>Log in</h4>
+                    <form action="./login.php" method="post">
+                        아이디
+                        <input type="text" name="id"><br>
+                        패스워드
+                        <input type="password" name="pw"> <br>
+
+                        <input type="submit" value="로그인"> 
+                        <input type="reset" value="초기화"> <br>
+
+                        <a href="./singin.html" target="_blank">회원가입</a>
+                        <a href="./forgot.html" target="_blank">비밀번호 찾기</a>
+                    </form>
+
+                </div>
+
+            </aside>
+
+            <footer>
+                Copright &copy; 2023 web shop
+            </footer>
+
+        </div>
+    </body>
+</html>

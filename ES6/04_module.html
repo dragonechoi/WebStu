@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS es6 module</title>
+
+        <!-- js 는 다른 JS에서 만든 클래스나 변수를 사용할수없음 -->
+        <!-- 만약 웹을 제작중이라면 HTML 에서 JS 파일을 연결하여 사용하기에 -->
+        
+        <!-- <script src="./js/module.js"></script> -->
+
+        <!-- 하지만 React Native 나 Js 를 서버용 언어로 사용하는 node.js 에서는 HTML 없이 프로그램이 동작함 -->
+       <!-- HTML  에서는 module import 를 하려면 type 설정 필수 -->
+       <!-- 이 모듈 기능을 웹 서버에서만 동작함 닷홈 -->
+       <script type="module">
+
+            //다른 JS 의 함수, 변수 , 클래스를 가져오는 문법 
+           // import show from './module_aa.js' //{} 없으면 default 
+            //import addTextToBody from './module_aa.js' 이런식으로 가져오면 못씀
+
+            //exprty default가 아닌것들은 impot 할때 반드시 {} 안에작성
+           // import {addTextToBody} from './module_aa.js'
+
+            //import{num , age} from './module_aa.js'
+
+            //같은 문서 안에있는 여러개 한번에 import 
+            import show,{addTextToBody , num , age} from './module_aa.js'
+
+            //import 하는것의 이름을 이곳에서 다르게 사용할 수 있음 
+            import {num as n ,age} from './module_aa.js'
+
+            show();
+            addTextToBody("nice to meet you");
+            alert(n+"\n"+age)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

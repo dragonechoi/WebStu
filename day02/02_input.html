@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Input Element</title>
+    </head>
+    <body>
+
+        <!-- 너비를 넘어가면 자동 스크롤링 -->
+        <input type="text" size="40"><br>
+        <input type="password"><br>
+
+        <!-- 라디오 버튼 : 하나의 그룹이 되어야만 싱글 초이스가 된다 -->
+        <!-- 라디오 버튼의 네임 속성값을 같은 값으로 지정하면 그룹이됨 -->
+        라디오 버튼 :
+        <input type="radio" name="aaa">aaa
+        <input type="radio" name="aaa">bbb
+
+        <br>
+
+
+
+        <!-- <label>요소를 이용하면 글시를 눌렀을떄 선택이 됨 -->
+            <input type="radio" name="rg2" id="rb1"> 
+            <label for="rb1">Male</label>
+
+            <input type="radio" name="rg2" id="rb2" checked = "checked">
+            <label for="rb2">Female</label>
+
+            <hr>
+
+            <!-- 체크박스 - 멀티 초이스 -->
+            <label><input type="checkbox">Apple</label>
+            <label><input type="checkbox">Orange</label>
+            <label><input type="checkbox">Banana</label>
+
+            <hr>
+
+            <!-- 제출버튼과 초기화 버튼 : <form>요소 안에 있을때만 가능함-->
+             <input type="submit" value="전송">
+             <input type="reset">
+            <hr>
+
+            <!--버튼 만들기  -->
+            <!-- 1.input 요소의 타입 버튼 -->
+            <input type="button" value="중복 체크" onclick="alert('clicked')">
+            <!-- 2.button 요소 -->
+            <button onclick="alert('중복된 아이디 입니다.')">중복 체크</button>
+            
+            <!-- 이미지 버튼 만들기 -->
+            <!-- 1. <button> 요소안에 img 요소 배치-->
+            <button><img src="./image/bichon02.png" alt="비숑" width="50"></button>
+
+            <!-- 2.<input>요소의 image type - [form요소의 제출용 이미지 버튼] -->
+            <input type="image" src="./image/bichon02.png" alt="비숑" onclick="alert('비숑')" width="50">
+
+                
+            <hr>
+
+
+            <!-- 여러줄 입력 -->
+            <textarea cols="40" rows="5"></textarea>
+            
+            <hr>
+            
+            <!-- 콤보박스  -->
+            <select>
+                <option>aaa</option>
+                <option>bbb</option>
+                <option selected>ccc</option>
+            </select>
+
+            <!-- 콤보박스 옵션 그룹 -->
+            <select>
+                <optgroup label="중식">
+                    <option selected>자장면</option>
+                    <option>짬뽕</option>
+                    <option>볶음밥</option>
+                </optgroup>
+                <optgroup label="한식">
+                    <option>김치찌게</option>
+                    <option>떡갈비</option>
+                    <option>김밥</option>
+                </optgroup>
+            </select>
+
+            <hr>
+
+            <!-- 입력 박스 영역을 시각적으로 보여주는 요소 -->
+            <fieldset>
+                <legend>인적사항</legend>
+                <label>이름: <input type="text"></label>
+                <label>주소 <input type="text"></label>
+            </fieldset>
+
+    </body>
+</html>

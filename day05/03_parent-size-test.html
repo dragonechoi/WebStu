@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>parent element height zise test</title>
+        <style>
+
+            *{border: 1px dotted red;}
+
+            p{padding: 20px; margin: 5px;}
+
+            a{padding: 10px; margin: 10xp;}
+            input{padding: 10px; margin: 10px;}
+
+        </style>
+
+    </head>
+    <body>
+        <!-- 부모 요소의 box 사이즈는 언제나 자식 요소의 box 높이를 감싸지 않을수 있음 -->
+
+        <!-- 블럭요소안에 다른 블럭요소를 배치 -->
+        <!-- 자식요소의 마진,패딩을 주면 그만큼 부모의 높이도 커짐 -->
+        <div style="border: 1px dotted blue;">
+            <p>Hello</p>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <!-- 블럭요소안에 인ㄹ하인 요소를 배치 -->
+        <div style="border: 1px dotted lightgreen; background-color: khaki;">
+            <!-- 인라인 요소의 마진,패딩은 부모의 높이의 영향을 주지 않음 -->
+            <a href="">Google</a>
+
+            <!-- 인라인 요소중에 인라인 블럭요소는 블럭의 특징이 있기에 부모높이의 영향을줌 -->
+            <input type="text">
+
+        </div>
+    </body>
+</html>

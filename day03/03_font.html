@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Font & Text</title>
+
+        <style>
+
+            /* 폰트 글꼴 지정 */
+            p{font-family:"Blippo Blk BT",sans-serif;}
+            p{font-family: "휴먼굵은샘체", serif;}
+            p{font-family: monospace;}
+
+            /* 모든 컴퓨터에서 동일한 폰트로 보여지려면 */
+            /* 웹폰트 사용 : 개발자의 커스텀 폰트  */
+            @font-face {
+                font-family: "MyFont";
+                src: url("./KOTRA\ HOPE.ttf");
+            }
+
+            p{font-family: "MyFont",sans-serif;}
+
+            /* 폰트크기 */
+            p{font-size: small;} /* 키워드를 이용 */
+            p{font-size: 16px;} /*수치단위 px*/
+            p{font-size: 1.5em;} /*비율을 잉요한 사이즈 1.5배 (권장)*/
+
+            /* bold,nomal */
+            p{font-weight: bold;}
+            /* italic , nomal */
+            p{font-style: italic;}
+
+            /* 폰트속성 4개를 한번에 축양형으로 설정 */
+            /* 순서[weight/style] size family */
+            p{font: bold italic 300% "MyFont" "휴먼굵은샘체",serif;}
+
+            /* 텍스트에 관련된 속성들 */
+
+            /* 텍스트정렬 */
+            /* p{text-align: center;}
+            p{text-align: right;} */
+            
+            /* 텍스트 변환 [ 대소문자 변환] */
+            p{text-transform: uppercase;}
+            p{text-transform: lowercase;}
+            p{text-transform: capitalize;}
+            
+            /* 텍스트 선긋기 */
+            /* p{text-decoration: overline;}
+            p{text-decoration: underline;}
+            p{text-decoration: line-through;} */
+            p{text-transform: none;}
+
+            /* 텍스트 그림자 */
+            p{text-shadow: 5px 3px 5px red;}
+
+            /* 워드 랩 */
+            p.aaa{
+                border: 1px solid blue;
+                width: 5em;
+                word-wrap: break-word;
+               
+            }
+
+         #bbb{
+            column-count: 2;
+            column-gap: 80px;
+            column-rule: 4px dashed red;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <p>Hello World</p>
+        <p>한글은 어떠한가</p>
+
+        <p class="aaa">
+            한글은 전혀 문제 없이 자동으로 워드 랩 됨.
+            Aaaaaaaaaaaaaaaaaaaaaaaaaaaa Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+
+        <!-- 다중 컬룸 -->
+        <p id="bbb">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestias facere consequatur labore, incidunt aperiam, dicta aliquam hic tempore sapiente voluptatem? Laborum dicta praesentium accusantium ullam quibusdam libero aliquid aperiam.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, quia eum ab esse suscipit cum maiores molestiae necessitatibus a provident ratione quis, totam perferendis, accusamus sint. Asperiores error nobis reiciendis!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum quisquam non laborum saepe sit, tenetur, qui, error aperiam optio odit! Quae quis ipsum reprehenderit veniam tempora. Quisquam, consectetur corrupti?
+        </p>
+
+        <!-- 텍스트 정렬할떄 인라인 요소와 블럭요소의 차이 -->
+        <!-- text-align 블럭 요소에서만 의미가 있음 -->
+        <div style="text-align: center; background-color: aqua; height: 5em;">Hello</div>
+        <span style="text-align: center; background-color: aqua; line-height: 5em;">Hello</span>
+
+
+    </body>
+</html>

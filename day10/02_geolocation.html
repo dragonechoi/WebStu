@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS Geolocation</title>
+
+        <script>
+            function aaa(){
+
+                navigator.geolocation.getCurrentPosition(function(position){
+                    var latitude = position.coords.latitude;
+                    var longitude=position.coords.longitude;
+
+                    document.getElementById('hh').innerHTML=latitude+" , "+longitude;
+
+                });
+            }
+            function bbb(){
+                id=navigator.geolocation.watchPosition(function(position){
+                    var lat= position.coords.latitude;
+                    var lng= position.coords.longitude;
+                    document.querySelector('#hh').innerHTML=`${lat},${lng}`; //JS 템플릿 문자열 ``{백틱} 안에서 ${변수명 구분} 
+                });
+            }
+            function ccc(){
+                navigator.geolocation.clearWatch(id);
+            }
+        </script>
+
+    </head>
+    <body>
+        
+        <button onclick="aaa()">My location</button>
+        <h2 id="hh">location</h2>
+        
+        <button onclick="bbb()">위치 자동 업데이트</button>
+        <button onclick="ccc()">위치 자동 종료</button>
+
+    </body>
+</html>
